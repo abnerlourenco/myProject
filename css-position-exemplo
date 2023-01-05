@@ -64,6 +64,10 @@
 
             background: green;
         }
+
+        /* o position fixed, como proprio nome sugere ele mantem o elemento fixo 
+        na posição estabelecida, mesmo que mude o posicionamento do scroll da tela 
+        ele permanece na mesma posição */
         .fixed {
             position: fixed;
             top: 0;
@@ -72,6 +76,9 @@
 
             width: 20rem;
         }
+
+        /* O position sticky ele define uum ponto onde o elemento ficará fixo. Nesse 
+        exemplo temos que quando o elemento estiver a 10rem ele permanece fixo */
         .sticky {
             position: sticky;
 
