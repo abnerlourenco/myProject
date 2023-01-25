@@ -1,0 +1,40 @@
+#toggle {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+label {
+    cursor: pointer;
+    width: 16rem;
+    height: 8rem;
+    background-color: #64dd4c;
+    display: block;
+    border-radius: 6rem;
+    position: relative;
+}
+
+label::after {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 6rem;
+    height: 6rem;
+    background-color: #725a5a;
+    border-radius: 6rem;
+    transition: 0.3s;
+}
+
+#toggle:checked+label {
+    background: #be240f;
+}
+
+#toggle:checked+label::after {
+    left: calc(100% - 1rem);
+    transform: translateX(-100%);
+} 
+
+label:active::after {
+    width: 10rem;
+}
