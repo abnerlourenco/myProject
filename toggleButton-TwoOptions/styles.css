@@ -1,0 +1,67 @@
+#conteiner-toggle {
+    display: flex;
+    align-items: center;
+
+    max-width: 35rem;
+    
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0.5rem 2rem;
+}
+
+.receita, .despesa {
+    height: 8rem;
+    
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+}
+
+.label-toggle{
+    position: relative;
+    width: 16rem;
+    height: 8rem;
+}
+
+#toggle {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+#toggle-slider {
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    width: 16rem;
+    height: 8rem;
+    background-color: #64dd4c;
+    display: block;
+    border-radius: 6rem;
+    position: absolute;
+}
+
+#toggle-slider::after {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 6rem;
+    height: 6rem;
+    background-color: #ffffff;
+    border-radius: 6rem;
+    transition: 0.3s;
+}
+
+#toggle:checked + #toggle-slider {
+    background: #da2811;
+}
+
+#toggle:checked + #toggle-slider::after {
+    left: calc(100% - 1rem);
+    transform: translateX(-100%);
+} 
+
+#toggle-slider:active::after {
+    width: 10rem;
+}
