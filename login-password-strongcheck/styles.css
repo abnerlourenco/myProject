@@ -3,8 +3,7 @@
 }
 
 html,
-body,
-.wrapper {
+body {
   height: 100%;
 }
 
@@ -18,10 +17,8 @@ body {
   display: grid;
   place-items: center;
   margin: 0;
-  background-color: #000000;
-  background-image: url("bbblurry.svg");
-  background-repeat: no-repeat;
-  background-size: 200vh;
+  background-color: #6380c0;
+  background-size: cover;
   font-family: "Euclid Circular A";
   color: #868b94;
   animation: rotate 5s infinite alternate linear;
@@ -50,28 +47,72 @@ button {
   transition: 0.4s;
 }
 
+/* Card de login ------------------------------------ */
 .login-card {
   width: 400px;
-  padding: 100px 30px 32px;
+  padding: 0px 32px 40px 32px;
   border-radius: 1.25rem;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.486);
   backdrop-filter: blur(26px);
   text-align: center;
 }
 
+/* Seletor de Cadastrar ou entrar ---------------------------*/
+.selector-container {
+  display: flex;
+
+  width: 400px;
+  height: 3rem;
+  border-radius: 1rem;
+
+  margin-bottom: 30px;
+}
+
+.login-selector {
+  position: relative;
+  left: -32px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 50%;
+  height: 100%;
+  color: #f9f9f9;
+
+  font-size: 1.25rem;
+
+  content-visibility: hidden;
+}
+
+.no-selected {
+  background-color: rgba(255, 255, 255, 0.212);
+  color: #f9f9f9;
+
+  content-visibility: initial;
+}
+
+.no-selected:hover {
+  background-color: rgba(0, 0, 0, 0.582);
+  cursor: pointer;
+}
+
+.login-selector:first-child {
+  border-radius: 1.25rem 0 1.25rem 0;
+}
+
+.login-selector:last-child {
+  border-radius: 0 1.25rem 0 1.25rem;
+}
+
+/* Titulos ----------------------------------- */
 .login-card > h2 {
   font-size: 36px;
   font-weight: 600;
   margin: 0 0 6px;
   color: #f9f9f9;
-}
 
-.login-card img {
-  width: 120px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  padding: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
 
 .login-card > h3 {
@@ -81,6 +122,7 @@ button {
   font-size: 1rem;
 }
 
+/* Formulario ---------------------------------- */
 .login-form {
   width: 100%;
   margin: 0;
@@ -117,6 +159,7 @@ button {
   }
 }
 
+/* Loadding -------------------------------------- */
 .spinner {
   position: absolute;
   top: 50%;
@@ -135,12 +178,7 @@ button {
   opacity: 1;
 }
 
-.indicator {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
+/* Barra de força da senha ---------------------- */
 #bars {
   margin: 8px 0;
   flex: 1 1 auto;
@@ -150,6 +188,12 @@ button {
   height: 6px;
   border-radius: 3px;
   background: rgba(255, 255, 255, 0.1);
+
+  visibility: hidden;
+}
+
+#bars.active {
+  visibility: initial;
 }
 
 #bars div {

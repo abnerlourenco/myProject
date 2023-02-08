@@ -31,7 +31,7 @@ const getIndicator = (password, strengthValue) => {
     if (strengthValue[metric] === true) {
       strengthIndicator++;
     }
-    
+
   }
 
   return strength[strengthIndicator] ?? "";
@@ -59,7 +59,23 @@ const handleChange = () => {
   if (strengthText) {
     strengthDiv.innerText = `${strengthText} Password`;
     bars.classList.add(strengthText);
+    bars.classList.add("active");
   } else {
     strengthDiv.innerText = "";
+    bars.className.remove("active");
   }
+};
+
+selected = document.querySelector("#sign-in");
+// Fazer alternar entre o entrar e cadastrar
+const typeLoginSelected = {
+
+  SignIn() {
+
+  },
+
+  SignUp() {
+    
+  },
+
 };
