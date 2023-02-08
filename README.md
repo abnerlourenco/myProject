@@ -10,3 +10,4 @@
     - autocomplete input
     - tab bar navigation
     - modals
+    - login validations
