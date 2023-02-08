@@ -4,17 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="username">
-        <input type="text" spellcheck="false" onkeyup="handleChange(event)" onkeydown="handleStartTyping()" placeholder="Username">
-        <div id="spinner" class="spinner"></div>
-        <div></div>
-    </div>
-    <div id="alert" class="alert">
-        Username already exists
-    </div>
+    <div class="login-card">
+        <img
+          src="https://pub-static.fotor.com/assets/projects/pages/5ff61721271e45d2b9bbc6dbbd4b14c7/300w/purple-cute-school-girl-78a8ba2c107c4ce1bb7e5a3de0ed9528.jpg"
+        />
+        <h2>Login</h2>
+        <h3>Enter your credentials</h3>
+        <form class="login-form">
+          <div class="username">
+            <input
+              spellcheck="false"
+              class="control"
+              type="text"
+              placeholder="Username"
+              onkeyup="handleChange(event)"
+              onkeydown="handleStartTyping()"
+            />
+            <div id="spinner" class="spinner"></div>
+          </div>
+          <div id="alert" class="alert">Username already exists</div>
+          <input
+            spellcheck="false"
+            class="control"
+            id="password"
+            type="password"
+            placeholder="Password"
+          />
+          <button class="control" type="button">LOGIN</button>
+        </form>
+      </div>
 
     <script type="text/javascript" src="main.js"></script>
 </body>
